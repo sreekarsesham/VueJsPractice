@@ -1,2 +1,0 @@
-# VueJsPractice
-examples of VueJs

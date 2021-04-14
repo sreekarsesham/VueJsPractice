@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
+  <title>Practice</title>
   <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
@@ -13,6 +13,18 @@
   <h2 v-else>The number {{num}}</h2>
   <h2 v-show="showElement">using v-show</h2>
   <h2 v-show="showElement">showing using v-if</h2>
+  <h1 style="color:red">using v-for on array of items </h1>
+  <h2 v-for = "name in names":key="name">{{name}}</h2>
+  <h2 v-for = "(name,index) in names":key="name">{{index}} {{name}}</h2>
+  <h1 style="color:red">using v-for on array of objects </h1>
+  <h2 v-for = "name in fullNames":key="name.first">{{name.first}} {{name.last}}</h2>
+  <h1 style="color:red">using v-for on array of arrays </h1>
+
+  <div v-for = "actor in actors":key="actors.name">
+    <h2 style="color:gold">{{actor.name}}</h2>
+    <h3 v-for="movie in actor.movies">{{movie}}<h3>
+
+  </div>
 </div>
 
 </body>
@@ -25,6 +37,26 @@ const App = {
 
       num:12345624,
       showElement:true,
+      names:["Sashank","Arjun","Praneeth","Sreekar"],
+      fullNames:[
+        {first:"sashank",last:"Bhogu"},
+        {first:"Arjun",last:"Komarapu"},
+        {first:"Praneeth",last:"Gone"},
+        {first:"Sreekar",last:"Sesaham"},
+      ],
+
+      actors:[
+        {
+          name:'mega star',
+          movies:['sye ra','acharya'],
+        },
+        {
+          name:'power star',
+          movies:['jalsa','vakeel saab'],
+        
+        },
+
+      ],
 
     }
   }
