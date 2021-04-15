@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+  <div id ="app">
+    <h2>{{name}}</h2>
+    <div>
+      <button v-on:mouseover="name = 'sreekar'">Change Name</button>
+    </div>
+    <h2>count:{{count}}</h2>
+    <div>
+    <button v-on:click="count = count+1" style=width:10%>+</button>
+    <button v-on:click="count = count-1" style=width:10%>-</button>
+    <h2>used @click instead of v-on:click</h2>
+    <button @click="increament(5,$event)" style=width:10%>+5</button>
+    <button @click="decreament(5)" style=width:10%>-5</button>
+    </div>
+
+  </div>
+
+</body>
+
+<script>
+const App = {
+  data(){
+
+    return{
+
+     name : "padu",
+     count:0,
+    }
+  },
+  methods: {
+  
+    increament(num){
+
+        
+          this.count+=num;
+        
+        
+    },
+    decreament(num){
+    
+        this.count-=num;
+    },
+    name(){
+    
+      this.name='sesham'
+    
+    }
+    
+
+  }
+  
+}
+
+Vue.createApp(App).mount("#app");
+</script>
+</html>
