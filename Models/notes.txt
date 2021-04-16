@@ -1,0 +1,54 @@
+###################
+## Modifiers in vue 
+###################
+
+1) trim modifier:-
+  ----------------
+--> used to trim leading and trailing white spaces.
+syntax:-
+	v-directive.trim
+ex:-
+	v-model.trim
+	
+2) number modifier:-
+   -----------------
+--> used to restrict the input to be a number.if u give type as number also JS will take as string so we can use this modifier to make it as a number.
+syntax:-
+	v-directive.number
+ex:-
+	v-model.number
+	
+3) lazy modifier:-
+   ---------------
+--> it is used if we want to bind the data only when the change event occurs.
+syntax:-
+	v-directive.lazy
+			or
+	v-directive.model.lazy (models can be chained)
+	
+ex:-
+	v-model.lazy
+		or
+	v-model.trim.lazy
+	
+	
+4) prevent modifier:-
+   ------------------
+--> this is used on the event element to prevent some action for example you want to prevent refreshing the form after clicking we use prevent on the @submit event.this is used instead of "event.preventDefault()".
+
+syntax:-
+	@event.prevent
+ex:- 
+	@submit.prevent
+usage:-
+	<form @submit.prevent="submitForm">	
+	
+5) keyup modifier:-
+   -------------
+--> this is used when we want to perform an action on key press(ex: enter key)
+syntax:-
+	@keyup.key="action"
+ex:-
+	@keyup.enter="submitForm"
+
+

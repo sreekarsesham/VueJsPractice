@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Practice</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+
+  <div id ="app">
+  
+  <div>
+     <pre>
+      {{JSON.stringify(formValues,null,2)}}
+    </pre>
+  
+  </div>
+ 
+  <form @submit.prevent="submitForm">
+  <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" v-model.trim.lazy="formValues.name">
+ 
+  </div>
+   <div>
+      <label for="Password">Password</label>
+      <input type="password" id="Password" v-model="formValues.password">
+  </div>
+  <div>
+  <label for ="country">Country</label>
+  <select id="country" v-model="formValues.country">
+  <option value=''>Select a country</option>
+  <option value='India'>India</option>
+  <option value='USA'>USA</option>
+  
+  </select>
+  
+  </div>
+   <div>
+  <label for ="country">Country</label>
+  <select id="country" multiple v-model="formValues.multiSelected">
+  
+  <option value='India'>India</option>
+  <option value='USA'>USA</option>
+  <option value='Singapore'>Singapore</option>
+  
+  </select>
+  
+  </div>
+
+  <div>
+    <input type="checkbox" 
+    id="opentowork" 
+    v-model="formValues.OpenToWork" 
+    true-value="yes" 
+    false-value="no">
+
+    <label id ="opentowork">Are you open to work ?</label>
+  </div>
+  <div>
+  <label>Skills</label>
+  <input type="checkbox" id="HTML" value="HTML" v-model="formValues.skillSet"></input>
+  <label for="HTML">HTML</label>
+  <input type="checkbox" id="CSS" value="CSS" v-model="formValues.skillSet"></input>
+  <label for="CSS">CSS</label>
+  <input type="checkbox" id="Vue" value="Vue" v-model="formValues.skillSet"></input>
+  <label for="Vue">Vue</label>
+  </div>
+
+  <div>
+
+    <label for="">Years of experience</label>
+    <input type="radio"
+    id="0-2"
+    value="0-2"
+    v-model="formValues.yearsOfExperience"/>
+    <label for="0-2">0-2</label>
+
+    <input type="radio"
+    id="2-5"
+    value="2-5"
+    v-model="formValues.yearsOfExperience"/>
+    <label for="2-5">2-5</label>
+
+    <input type="radio"
+    id="5+"
+    value="5+"
+    v-model="formValues.yearsOfExperience"/>
+    <label for="5+">5+</label>
+
+
+  </div>
+  <div>
+    <label for="age">Age</label>
+    <input @keyup.enter="submitForm"type = "number" id="age" v-model.number.lazy="formValues.age"/>
+  </div>
+  <div>
+    <button>Submit</button>
+  </div>
+</form>
+</div>
+
+</body>
+
+<script>
+const App = {
+  data(){
+
+    return{
+
+    formValues:{
+        name:'',
+        password:'',
+        country:'',
+        multiSelected:[],
+        OpenToWork:"no",
+        skillSet:[],
+        yearsOfExperience:"",
+        age:null
+        
+    }
+
+    }
+  },
+  methods:{
+
+    submitForm(){
+      //event.preventDefault()
+      console.log("value are",this.formValues)
+    }
+  }
+  
+}
+
+Vue.createApp(App).mount("#app");
+</script>
+<style>
+#app{
+
+  
+}
+
+
+</style>
+</html>
