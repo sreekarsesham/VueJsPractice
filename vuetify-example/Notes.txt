@@ -15,6 +15,8 @@ npm install vuetify : this will install vue but we need to add imports manually 
 
 vue add vuetify : this will install vue and add all the required imports and code(as above)for vuetify for us in the respected places. 
 
+"better to use npm install and add manual code " 
+
 --> <v-app> is the root tag of vuetify its very important.all the vuetify components must be added into this tag only
 it contains headerc and footer 
 --> <v-content> is the tag in which our complete page content such as buutons,tables etc  must be placed. 
@@ -33,5 +35,10 @@ tag :- <v-app-bar></v-app-bar>
 Note:- for other props of app bar please refer https://vuetifyjs.com/en/api/v-app-bar/
 
 =============================================================================================================================
+
+vue-Router:-
+-----------
+installation :- vue add router  select Y and then Y
+------------
 		   
 
