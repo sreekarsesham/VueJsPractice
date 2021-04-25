@@ -1,0 +1,37 @@
+####################
+## vuetify notes
+####################
+
+install :- vue add vuetify and select "default" when prompted.
+-------
+
+Note difference b/w adding and installing:-
+-------------------------------------------
+
+npm install vuetify : this will install vue but we need to add imports manually as shown below
+			
+			import vuetify from 'vuetify';
+			Vue.use(vuetify)
+
+vue add vuetify : this will install vue and add all the required imports and code(as above)for vuetify for us in the respected places. 
+
+--> <v-app> is the root tag of vuetify its very important.all the vuetify components must be added into this tag only
+it contains headerc and footer 
+--> <v-content> is the tag in which our complete page content such as buutons,tables etc  must be placed. 
+===========================================================================================================================
+Nav Bar / App bar / Tool Bar:-
+------------------------------
+tag :- <v-app-bar></v-app-bar>
+
+--> each and every vuetify components can be accessed or changed using props(such as dark,height=100,color etc)
+--> fix nav bar at top add a prop called as (app) in <v-app-bar> tag and to change to dark add dark prop as shown below
+	
+	syntax:- <v-app-bar app dark>
+		      ..ur code 
+		   </v-app-bar>
+
+Note:- for other props of app bar please refer https://vuetifyjs.com/en/api/v-app-bar/
+
+=============================================================================================================================
+		   
+
