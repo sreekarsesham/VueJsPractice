@@ -36,9 +36,8 @@ Note:- for other props of app bar please refer https://vuetifyjs.com/en/api/v-ap
 
 =============================================================================================================================
 
-vue-Router:-
------------
-installation :- vue add router  select Y and then Y
-------------
+
+
+
 		   
 

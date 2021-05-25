@@ -52,7 +52,7 @@
           What's next?
         </h2>
 
-        <v-row justify="center">
+        <v-row justify="center" >
           <a
             v-for="(next, i) in whatsNext"
             :key="i"
@@ -93,6 +93,7 @@
         <h2 class="headline font-weight-bold mb-3">
           Ecosystem
         </h2>
+        <button @click="goTodetail()" >Nagvigate</button>
 
         <v-row justify="center">
           <a
